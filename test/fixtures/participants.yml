@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  communication_preference: 1
+  status: MyString
+
+two:
+  communication_preference: 1
+  status: MyString
