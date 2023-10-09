@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_08_033922) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_08_035801) do
   create_table "groups", force: :cascade do |t|
     t.integer "visibility"
     t.integer "price_limit"
     t.integer "participant_limit"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.integer "communication_preference"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
