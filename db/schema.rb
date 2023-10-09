@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_08_035801) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_09_002524) do
   create_table "groups", force: :cascade do |t|
     t.integer "visibility"
     t.integer "price_limit"
@@ -25,6 +25,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_08_035801) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "group_id"
+    t.integer "person_id"
+    t.index ["group_id"], name: "index_participants_on_group_id"
+    t.index ["person_id"], name: "index_participants_on_person_id"
   end
 
   create_table "people", force: :cascade do |t|
